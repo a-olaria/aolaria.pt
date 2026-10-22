@@ -5,25 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Manifesto — A Olaria</title>
     <style>
-      :root { color-scheme: light; }
+      @font-face {
+        font-family: "A Olaria Text";
+        src: url("../assets/fonts/myanmar-mn-bold.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Futura Bold";
+        src: url("../assets/fonts/futura-bold.woff2") format("woff2");
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+      :root {
+        color-scheme: light;
+        /* Adjust this value to change the space between letters in this title. */
+        --title-letter-spacing: -0.03em;
+      }
       body {
-        display: grid;
         min-height: 100vh;
         margin: 0;
-        place-items: center;
         background: #f6f1e8;
-        color: #29251f;
-        font-family: Georgia, "Times New Roman", serif;
+        color: #21070b;
+        font-family: "A Olaria Text", "Times Regular", "Times New Roman", Times, serif;
       }
-      main { max-width: 42rem; padding: 2rem; text-align: center; }
-      h1 { margin: 0; font-size: clamp(2.5rem, 8vw, 5rem); font-weight: 400; }
-      p { font-family: system-ui, sans-serif; font-size: 1.05rem; }
+      main {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        min-height: 100vh;
+        padding: clamp(1.5rem, 4vw, 3.5rem);
+        text-align: center;
+      }
+      .rules {
+        height: clamp(0.45rem, 0.9vw, 0.7rem);
+      }
+      .rules--top {
+        border-top: clamp(0.65rem, 1.35vw, 1.1rem) solid currentColor;
+        border-bottom: clamp(0.35rem, 0.7vw, 0.55rem) solid currentColor;
+      }
+      .rules--bottom {
+        height: clamp(0.28rem, 0.55vw, 0.45rem);
+        border-top: clamp(0.35rem, 0.7vw, 0.55rem) solid currentColor;
+        border-bottom: clamp(0.65rem, 1.35vw, 1.1rem) solid currentColor;
+      }
+      h1 {
+        align-self: center;
+        max-width: 15ch;
+        margin: 0;
+        font-family: "Futura Bold", Futura, "Arial Black", Arial, sans-serif;
+        font-size: clamp(2.6rem, 8vw, 6.5rem);
+        font-weight: 400;
+        letter-spacing: var(--title-letter-spacing);
+        line-height: 0.86;
+      }
+      .rules + h1 { margin-top: clamp(1.55rem, 3.4vw, 2.7rem); }
+      h1 + .rules { margin-top: clamp(0.65rem, 1.4vw, 1.15rem); }
+      .manifesto-text {
+        max-width: 44rem;
+        margin: clamp(2rem, 5vw, 4rem) auto 0;
+        font-family: "Times Regular", "Times New Roman", Times, serif;
+        font-size: clamp(1.15rem, 1.9vw, 1.5rem);
+        font-weight: 400;
+        line-height: 1.55;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+      .manifesto-text p { margin: 0 0 1.3em; }
+      .back-link {
+        position: fixed;
+        bottom: clamp(1.5rem, 4vw, 3.5rem);
+        left: clamp(1.5rem, 4vw, 3.5rem);
+        color: inherit;
+        font-family: "A Olaria Text", "Times Regular", "Times New Roman", Times, serif;
+        font-size: 0.9rem;
+        font-weight: 400;
+        text-decoration-thickness: 0.1em;
+        text-underline-offset: 0.25em;
+      }
+      }
     </style>
   </head>
   <body>
     <main>
-      <h1>Estamos a cozinhar.</h1>
-      <p>Esta página está ainda a ser desenvolvida.</p>
+      <div class="rules rules--top" aria-hidden="true"></div>
+      <h1>MANIFESTO</h1>
+      <div class="rules rules--bottom" aria-hidden="true"></div>
+      <div class="manifesto-text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed urna vitae lacus interdum feugiat. Donec vitae arcu vel nulla posuere efficitur. Sed euismod, ligula sed mattis malesuada, nibh erat feugiat lorem, sed placerat nunc mauris a mi.</p>
+        <p>Integer posuere, justo vitae faucibus condimentum, sapien nunc posuere nunc, non imperdiet eros turpis sed libero. Maecenas ultrices, nisl vitae pulvinar feugiat, erat felis volutpat nisl, sed facilisis arcu ligula a massa. Nulla facilisi.</p>
+        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi eget consequat purus. Nam in sem quis massa posuere volutpat. Praesent a lectus quis nunc malesuada dictum vel vel erat.</p>
+        <p>Suspendisse potenti. Aliquam erat volutpat. Donec congue magna nec lorem tempor, quis convallis massa auctor. Quisque venenatis, velit sit amet gravida semper, neque neque malesuada nisl, vitae iaculis arcu erat in velit.</p>
+        <p>Proin id turpis vitae leo volutpat pharetra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis ut nibh vitae augue posuere fermentum. Donec ut lacus eu justo consequat cursus.</p>
+      </div>
+      <a class="back-link" href="/">Voltar</a>
     </main>
   </body>
 </html>
