@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Subscrição por Selos — A Olaria</title>
+    <style>
+      @font-face {
+        font-family: "A Olaria Text";
+        src: url("../assets/fonts/myanmar-mn-bold.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Futura Bold";
+        src: url("../assets/fonts/futura-bold.woff2") format("woff2");
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+      :root {
+        color-scheme: light;
+        /* Adjust this value to change the space between letters in this title. */
+        --title-letter-spacing: 0.05em;
+      }
+      body {
+        min-height: 100vh;
+        margin: 0;
+        background: #f6f1e8;
+        color: #21070b;
+        font-family: "A Olaria Text", "Times Regular", "Times New Roman", Times, serif;
+      }
+      main {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        min-height: 100vh;
+        padding: clamp(1.5rem, 4vw, 3.5rem);
+        padding-bottom: clamp(4.5rem, 8vw, 6rem);
+        text-align: center;
+      }
+      .rules {
+        height: clamp(0.28rem, 0.55vw, 0.42rem);
+      }
+      .rules--top {
+        border-top: clamp(0.3rem, 0.6vw, 0.5rem) solid currentColor;
+        border-bottom: clamp(0.16rem, 0.32vw, 0.26rem) solid currentColor;
+      }
+      .rules--bottom {
+        height: clamp(0.14rem, 0.28vw, 0.22rem);
+        border-top: clamp(0.16rem, 0.32vw, 0.26rem) solid currentColor;
+        border-bottom: clamp(0.3rem, 0.6vw, 0.5rem) solid currentColor;
+      }
+      h1 {
+        margin: 0;
+        font-family: "Futura Bold", Futura, "Arial Black", Arial, sans-serif;
+        font-size: clamp(1.65rem, 3.8vw, 3.25rem);
+        font-weight: 700;
+        letter-spacing: var(--title-letter-spacing);
+        line-height: 1;
+        text-transform: uppercase;
+      }
+      .rules + h1 { margin-top: clamp(1.1rem, 2.4vw, 1.925rem); }
+      h1 + .rules { margin-top: clamp(1.1rem, 2.4vw, 1.925rem); }
+      .wip {
+        margin: clamp(2rem, 5vw, 4rem) 0 0;
+        font-family: "A Olaria Text", "Times Regular", "Times New Roman", Times, serif;
+        font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        line-height: 1.35;
+      }
+      .back-link {
+        position: fixed;
+        bottom: clamp(1.5rem, 4vw, 3.5rem);
+        left: clamp(1.5rem, 4vw, 3.5rem);
+        color: inherit;
+        font-family: "A Olaria Text", "Times Regular", "Times New Roman", Times, serif;
+        font-size: 0.9rem;
+        font-weight: 400;
+        text-decoration-thickness: 0.1em;
+        text-underline-offset: 0.25em;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="rules rules--top" aria-hidden="true"></div>
+      <h1>Subscrição por Selos</h1>
+      <div class="rules rules--bottom" aria-hidden="true"></div>
+      <p class="wip">WIP</p>
+      <a class="back-link" href="/">Voltar</a>
+    </main>
+  </body>
+</html>
